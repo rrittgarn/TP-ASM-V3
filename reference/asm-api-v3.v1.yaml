@@ -8,8 +8,18 @@ paths:
   /v3/login:
     post:
       summary: Log in and generate an ASM Token
-      tags: []
-      responses: {}
+      tags:
+        - Authentication
+      responses:
+        '200':
+          description: OK
       operationId: post-v3-login
+      description: Log in and generate an OAuth Token
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
 components:
   schemas: {}
